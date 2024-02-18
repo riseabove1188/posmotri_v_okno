@@ -164,6 +164,10 @@ li:last-child {
   outline-offset: 1px;
 }
 
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -227,9 +231,14 @@ li:last-child {
   border: 1px solid #000;
 }
 
-.search-form__checkbox:focus-visible + span {
+.search-form__checkbox:checked + span {
   border: 1px solid #fff;
   outline-offset: 1px ;
+}
+
+.search-form__label:has(:focus) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .button {
