@@ -17,7 +17,7 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   display: grid;
-  place-items: end center;
+  place-items: center;
 }
 
 h1,
@@ -67,7 +67,7 @@ ol {
   display: grid;
   grid-template-rows: 386px 54px;
   row-gap: 16px;
-  margin-top: 85px;
+  margin-top: 158px;
 }
 
 .result__video-container {
@@ -85,7 +85,7 @@ ol {
 .content__details {
   inline-size: 399px;
   block-size: 534px;
-  margin-top: 10px;
+  margin-top: 85px;
 }
 
 .content__list-item:not(:nth-last-child(-n+2)) {
@@ -105,6 +105,7 @@ li:last-child {
 .content__video-card-thumbnail {
   inline-size: 194px;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
@@ -114,6 +115,7 @@ li:last-child {
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
+  margin-top: 4px
 }
 
 .title {
@@ -185,13 +187,16 @@ li:last-child {
 .search-form__checkbox-list {
   display: flex;
   column-gap: 15px;
-  width: fit-content;
+  inline-size: 212px;
+  justify-content: space-between;
+  margin-bottom: 3px;
 }
 
 .search-form__textfield {
   appearance: none;
   background-color: inherit;
   font-size: 18px;
+  font-stretch: condensed;
   font-family: inherit;
   color: rgba(255, 255, 255, 0.7);
   border: none;
@@ -211,6 +216,7 @@ li:last-child {
 
 .search-form__label-text:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .search-form__textfield:active {
@@ -219,8 +225,8 @@ li:last-child {
 
 .search-form__pseudo-checkbox {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   outline: 1px solid rgba(255, 255, 255, 1);
   margin-top: 1px;
   cursor: pointer;
@@ -231,25 +237,23 @@ li:last-child {
   border: 1px solid #000;
 }
 
-.search-form__checkbox:checked + span {
-  border: 1px solid #fff;
-  outline-offset: 1px ;
+.search-form__label:has(:focus) {
+  outline: none;
 }
 
-.search-form__label:has(:focus) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 
 .button {
+  font-family: inherit;
   background-color: inherit;
   color: rgba(255, 255, 255, 1);
   border: 1px solid #fff;
-  font-size: inherit;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-  font-stretch: condensed;
 }
 
 .button:hover {
@@ -279,4 +283,5 @@ li:last-child {
 .more-button {
   inline-size: 395px;
   block-size: 34px;
+  padding-top: 3px;
 }
